@@ -1,0 +1,22 @@
+{
+    "images":[
+        {
+            "image-1": "/image/salon.jepg",
+            "image-2": "/images/salon-interior2.jpg",
+            "image-3": "/images/salon-interior3.jpg",
+            "image-4": "/images/salon-interior4.jpg",
+            "image-5": "/images/salon-interior5.jpg",
+            "image-6": "/images/salon-interior6.jpg"
+
+        },
+        {
+            "logos":"/images/logo1.png"
+        },
+        {
+            "Art-1":"/images/salon-open.jpg",
+            "Art-2":"/images/salon-closed.jpg",
+            "Art-3":"/images/salon-on-leave.jpg",
+            "Art-4":"/images/salon-stepped-out.jpg"
+        }
+    ]
+}
