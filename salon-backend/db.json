@@ -1,0 +1,110 @@
+{
+  "services": [
+    {
+      "id": "1",
+      "category": "Silk Press",
+      "name": "Silk Press Level A",
+      "details": "Comes with shampoo, deep conditioner, and trim",
+      "duration": "80 mins",
+      "price": "Starts at $120"
+    },
+    {
+      "id": "2",
+      "category": "Silk Press",
+      "name": "Silk Press Level B",
+      "details": "Comes with shampoo, deep conditioning, and deep treatment",
+      "duration": "120 mins",
+      "price": "Depends on hair length and thickness"
+    },
+    {
+      "id": "3",
+      "category": "Waxing Services",
+      "name": "Full Facial Wax",
+      "details": "Includes waxing for the entire face",
+      "duration": "45 mins",
+      "price": "$45"
+    },
+    {
+      "id": "4",
+      "category": "Waxing Services",
+      "name": "Chin Wax",
+      "details": "Quick chin waxing service",
+      "duration": "10 mins",
+      "price": "$10"
+    },
+    {
+      "id": "5",
+      "category": "Waxing Services",
+      "name": "Mustache Wax",
+      "details": "Mustache waxing service",
+      "duration": "10 mins",
+      "price": "$10"
+    },
+    {
+      "id": "6",
+      "category": "Waxing Services",
+      "name": "Eyebrow Wax",
+      "details": "Eyebrow waxing for a clean and shaped look",
+      "duration": "10 mins",
+      "price": "$10"
+    },
+    {
+      "id": "7",
+      "category": "Haircuts",
+      "name": "Economy Cut",
+      "details": "Simple haircut for short to medium length",
+      "duration": "20 mins",
+      "price": "$20"
+    },
+    {
+      "id": "8",
+      "category": "Haircuts",
+      "name": "Kids Haircut",
+      "details": "Haircut for children aged 10 and below",
+      "duration": "20 mins",
+      "price": "$15"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "934a",
+      "name": "anthony",
+      "email": "mwauraa634@gmail.com",
+      "date": "2025-05-09",
+      "service": "Hair Cuts"
+    },
+    {
+      "id": "2025",
+      "name": "tony",
+      "email": "an2to3ny@gmail.com",
+      "date": "2025-01-10",
+      "service": "Shampoo Hair Services"
+    },
+    {
+      "id": "348b",
+      "name": " moses njuguna ngugi ",
+      "email": "mosesnjugunangugi@gmail.com",
+      "date": "2025-01-17",
+      "service": "Waxing Services"
+    },
+    {
+      "id": "4101",
+      "name": "joyce",
+      "email": "joyce234@gmail.com",
+      "date": "2025-01-17",
+      "service": "Shampoo Hair Services"
+    },
+    {
+      "id": "f686",
+      "name": "ken",
+      "email": "ken23@gmail.com",
+      "date": "2025-01-16",
+      "service": "Silk Press"
+    }
+  ],
+  "contact": {
+    "phone": "346-241-1040",
+    "alternatePhone": "346-508-8211",
+    "email": "economyhaircuts@yahoo.com"
+  }
+}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +10,9 @@ const Contact = () => {
 
   const [error, setError] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  // Location coordinates for the map
+  const location = { lat: 29.5616, lng: -95.2471 }; // Coordinates for Pearland, Texas
 
   // Handle form input changes
   const handleChange = (e) => {
@@ -46,6 +49,16 @@ const Contact = () => {
 
   return (
     <div className="contact-container">
+      {/* Location Information */}
+      <div className="location-info">
+        <div className="location-header">
+          <h2 className="status">Open Now</h2>
+          <p className="location-details">
+            <strong>Located at:</strong> 4055 Village Drive, Pearland, Texas, inside Attiva 55 and Up management office. We’re at the back, or you can follow the signs to the side gate. Call <a href="tel:+13466088211">346-608-8211</a> or <a href="tel:+13462411040">346-241-1040</a>, and we will open the gate for you.
+          </p>
+        </div>
+      </div>
+
       <h2 className="header">Contact Us</h2>
       <p className="sub-header">If you have any questions, feel free to get in touch!</p>
 
@@ -55,6 +68,7 @@ const Contact = () => {
         <p className="success">Your message has been sent successfully!</p>
       )}
 
+      {/* Contact Form */}
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name" className="label">Name:</label>
@@ -100,10 +114,23 @@ const Contact = () => {
       </form>
 
       <div className="contact-info">
-        <h3 className="info-header">Our Location</h3>
-        <p>Texas, USA</p>
-        <p>Phone: <a href="tel:+13462411040">346-241-1040</a> or <a href="tel:+13465088211">346-508-8211</a></p>
+        <h3 className="info-header">Our Contact Information</h3>
+        <p>Phone: <a href="tel:+13462411040">346-241-1040</a> or <a href="tel:+13466088211">346-608-8211</a></p>
         <p>Email: <a href="mailto:economyhaircuts@yahoo.com">economyhaircuts@yahoo.com</a></p>
+      </div>
+
+      {/* Map Section */}
+      <div className="map-container">
+        <h3>Find Us Here:</h3>
+        <LoadScript googleMapsApiKey="YOUR_GOOGLE_MAPS_API_KEY">
+          <GoogleMap
+            mapContainerStyle={{ width: '100%', height: '400px' }}
+            center={location}
+            zoom={15}
+          >
+            <Marker position={location} />
+          </GoogleMap>
+        </LoadScript>
       </div>
     </div>
   );

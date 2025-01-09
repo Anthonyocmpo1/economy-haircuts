@@ -6,7 +6,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import Home from './pages/Home';
 import About from '../src/components/ About';
 import Services from '../src/components/Services';
-import Booking from '../src/components/ Booking';
+// import Booking from '../src/components/ Booking';
 import Contact from '../src/components/Contant';
 
 import './App.css';
@@ -38,7 +38,7 @@ function App() {
             </button>
             <ul className={menuOpen ? 'nav-links open' : 'nav-links'}>
               <li><Link to="/">Home</Link></li>
-              <li><Link to="/booking">Book Appointment</Link></li>
+              {/* <li><Link to="/booking">Book Appointment</Link></li> */}
               <li><Link to="/about">About Us</Link></li>
               <li><Link to="/services">Services</Link></li>
               <li><Link to="/contact">Contact</Link></li>
@@ -52,7 +52,7 @@ function App() {
               path="/"
               element={<Home images={data.images} logos={data.logos} artwork={data.artwork} />}
             />
-            <Route path="/booking" element={<Booking />} />
+            {/* <Route path="/booking" element={<Booking />} /> */}
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services artwork={data.artwork} />} />
             <Route path="/contact" element={<Contact />} />
@@ -61,7 +61,7 @@ function App() {
 
         <footer>
           <div className="footer-content">
-            <p>&copy; 2024 Economy Haircuts @ Attiva Pearland</p>
+            <p>&copy; 2025 Economy Haircuts @ Attiva Pearland</p>
             <div className="social-media-links">
               <a href="https://www.facebook.com/YourFacebookPage" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-facebook footer-icon"></i>

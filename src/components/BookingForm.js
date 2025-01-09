@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+// Booking Form Component
 function BookingForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -7,7 +8,6 @@ function BookingForm() {
   const [service, setService] = useState('');
   const [loading, setLoading] = useState(false);
   const [bookingConfirmed, setBookingConfirmed] = useState(false);
-  const [businessInfo, setBusinessInfo] = useState({ phone: '', email: '' });
 
   const handleBookingSubmit = async (e) => {
     e.preventDefault();
@@ -20,6 +20,7 @@ function BookingForm() {
     setLoading(true);
 
     try {
+      // Make the POST request to the backend API
       const response = await fetch('http://localhost:5000/api/bookings', {
         method: 'POST',
         headers: {
@@ -33,11 +34,9 @@ function BookingForm() {
       }
 
       const data = await response.json();
+      console.log(data);  // Log the response data from the backend
 
-      // Save contact information from backend
-      setBusinessInfo(data.contact);
-
-      setBookingConfirmed(true); // Show confirmation message
+      setBookingConfirmed(true);  // Show confirmation message
     } catch (error) {
       alert('Error: ' + error.message);
     } finally {
@@ -49,16 +48,7 @@ function BookingForm() {
     <div className="booking-form-container">
       <h2>Book Your Appointment</h2>
       {bookingConfirmed ? (
-        <div>
-          <p>Thank you for booking with us, {name}!</p>
-          <p>We will contact you at {email} if needed.</p>
-          <p>For more inquiries, feel free to reach us at:</p>
-          <ul>
-            <li>Phone: {businessInfo.phone}</li>
-            <li>Email: {businessInfo.email}</li>
-          </ul>
-          <p>We look forward to serving you!</p>
-        </div>
+        <p>Booking confirmed! We will contact you shortly.</p>
       ) : (
         <form onSubmit={handleBookingSubmit}>
           <div className="form-group">

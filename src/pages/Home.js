@@ -59,11 +59,12 @@ function Home({ images, logos, artwork }) {
   return (
     <div className="app">
       {/* Navbar Section */}
+      <h2>Welcome to Economy Hair Cuts!</h2>
+<p>Your one-stop destination for personalized unisex services catering to clients of all ages. Whether you're looking for stylish hair color, precision haircuts, or waxing and grooming services, we are dedicated to helping you look and feel your best.</p>
+<p>From fresh haircuts and relaxing treatments to special styling for memorable events, our talented team is here to deliver exceptional results tailored just for you.</p>
+<p>Our skilled and creative stylists stay up-to-date with the latest trends and techniques, ensuring you receive a look that perfectly complements your unique style and personality.</p>
+<p>Come visit us today and experience a welcoming space where beauty, style, and relaxation come together. Let us help transform your look and elevate your confidence!</p>
 
-      <h2>Welcome to Our Salon!</h2>
-<p>Your one-stop destination for stylish haircuts and grooming. We are committed to providing exceptional services that help you look and feel your best. Whether you're looking for a fresh haircut, a relaxing spa treatment, or a special styling for an event, our talented team is here to deliver top-notch results.</p>
-<p>At our salon, we prioritize your comfort and satisfaction, offering personalized services that cater to your individual needs. Our stylists are skilled, creative, and up-to-date with the latest trends to ensure you get a look that suits you perfectly.</p>
-<p>Come visit us today and experience a place where beauty, style, and relaxation come together!</p>
 
 
       <section id="logos">
@@ -83,7 +84,7 @@ function Home({ images, logos, artwork }) {
         <img src='/image/interior3.jpeg' alt='interior1' className="large-image" />;
         <img src='/image/interior4.jpeg' alt='interior1' className="large-image" />;
         <img src='/image/interior5.jpeg' alt='interior1' className="large-image" />;
-        <img src='/image/interior6.jpeg' alt='interior1' className="large-image" />;
+        {/* <img src='/image/interior6.jpeg' alt='interior1' className="large-image" />; */}
          </div>
       </section>
 
