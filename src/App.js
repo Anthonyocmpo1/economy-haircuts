@@ -1,45 +1,49 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; // Removed useCallback
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-// Import components from the components folder
 import Home from './pages/Home';
-import About from '../src/components/ About';
+import Gallery from '../src/components/Gallery';
 import Services from '../src/components/Services';
-// import Booking from '../src/components/ Booking';
 import Contact from '../src/components/Contant';
 
 import './App.css';
 
 function App() {
   const [data, setData] = useState({ images: [], artwork: [], logos: [] });
-  const [menuOpen, setMenuOpen] = useState(false); // Define menuOpen state
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   useEffect(() => {
-    fetch('/db.json') // Adjust the path if your db.json file is in a different location
+    fetch('/db.json') // Adjust the path if db.json is in the public folder
       .then((response) => response.json())
       .then(setData)
       .catch((error) => console.error('Error loading data:', error));
   }, []);
 
-  // Toggle the menu visibility when hamburger button is clicked
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+  const toggleDrawer = () => {
+    setDrawerOpen(!drawerOpen);
   };
 
   return (
     <Router>
       <div>
         <header>
-          <h1>Economy Haircuts @ Attiva Pearland</h1>
+          <h1>Economy Haircuts @ 4055 village Dr, pearland Texas, 77581</h1>
           <nav>
-            <button className="hamburger-menu" onClick={toggleMenu}>
+            <button className="hamburger-menu" onClick={toggleDrawer}>
               <i className="fas fa-bars"></i>
             </button>
-            <ul className={menuOpen ? 'nav-links open' : 'nav-links'}>
+            <div className={`drawer ${drawerOpen ? 'open' : ''}`}>
+              <ul>
+                <li><Link to="/" onClick={toggleDrawer}>Home</Link></li>
+                <li><Link to="/gallery" onClick={toggleDrawer}>Gallery</Link></li>
+                <li><Link to="/services" onClick={toggleDrawer}>Services</Link></li>
+                <li><Link to="/contact" onClick={toggleDrawer}>Contact</Link></li>
+              </ul>
+            </div>
+            <ul className="nav-links">
               <li><Link to="/">Home</Link></li>
-              {/* <li><Link to="/booking">Book Appointment</Link></li> */}
-              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/gallery">Gallery</Link></li>
               <li><Link to="/services">Services</Link></li>
               <li><Link to="/contact">Contact</Link></li>
             </ul>
@@ -52,8 +56,7 @@ function App() {
               path="/"
               element={<Home images={data.images} logos={data.logos} artwork={data.artwork} />}
             />
-            {/* <Route path="/booking" element={<Booking />} /> */}
-            <Route path="/about" element={<About />} />
+            <Route path="/gallery" element={<Gallery />} />
             <Route path="/services" element={<Services artwork={data.artwork} />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
@@ -63,10 +66,21 @@ function App() {
           <div className="footer-content">
             <p>&copy; 2025 Economy Haircuts @ Attiva Pearland</p>
             <div className="social-media-links">
-              <a href="https://www.facebook.com/YourFacebookPage" target="_blank" rel="noopener noreferrer">
+              {/* Direct link to Facebook page */}
+              <a
+                href="https://www.facebook.com/people/Economy-Hair-cuts/61566845251082/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="facebook"
+              >
                 <i className="fab fa-facebook footer-icon"></i>
               </a>
-              <a href="https://www.instagram.com/YourInstagramPage" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.instagram.com/economyhaircuts/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="instagram"
+              >
                 <i className="fab fa-instagram footer-icon"></i>
               </a>
             </div>
