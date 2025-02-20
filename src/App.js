@@ -3,15 +3,16 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import Home from './pages/Home';
-import Gallery from '../src/components/Gallery';
+import Gallery from './pages/Gallery';
 import Services from '../src/components/Services';
-import Contact from '../src/components/Contant';
+import Contact from './pages/Contact';
 
 import './App.css';
+import Header from './components/Header';
 
 function App() {
   const [data, setData] = useState({ images: [], artwork: [], logos: [] });
-  const [drawerOpen, setDrawerOpen] = useState(false);
+
 
   useEffect(() => {
     fetch('/db.json') // Adjust the path if db.json is in the public folder
@@ -20,35 +21,12 @@ function App() {
       .catch((error) => console.error('Error loading data:', error));
   }, []);
 
-  const toggleDrawer = () => {
-    setDrawerOpen(!drawerOpen);
-  };
+
 
   return (
     <Router>
       <div>
-        <header>
-          <h1>Economy Haircuts @ 4055 village Dr, pearland Texas, 77581</h1>
-          <nav>
-            <button className="hamburger-menu" onClick={toggleDrawer}>
-              <i className="fas fa-bars"></i>
-            </button>
-            <div className={`drawer ${drawerOpen ? 'open' : ''}`}>
-              <ul>
-                <li><Link to="/" onClick={toggleDrawer}>Home</Link></li>
-                <li><Link to="/gallery" onClick={toggleDrawer}>Gallery</Link></li>
-                <li><Link to="/services" onClick={toggleDrawer}>Services</Link></li>
-                <li><Link to="/contact" onClick={toggleDrawer}>Contact</Link></li>
-              </ul>
-            </div>
-            <ul className="nav-links">
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/gallery">Gallery</Link></li>
-              <li><Link to="/services">Services</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
-            </ul>
-          </nav>
-        </header>
+       <Header/>
 
         <main>
           <Routes>
