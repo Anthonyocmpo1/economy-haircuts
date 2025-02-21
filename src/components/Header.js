@@ -36,7 +36,7 @@ function Header() {
                 <div className="contact-info">
                   <FaPhone size={40} />
                   <div className="text-block">
-                    <b>Earland, Texas</b>
+                    <b>Pearland, Texas</b>
                   </div>
                 </div>
               </Col>
@@ -45,7 +45,8 @@ function Header() {
                   <MdLocationPin size={40} />
                   <div className="text-block">
                     <span>Call Us</span>
-                    <b>346-241-1040</b>
+                    <b>346-508-8211</b>
+                    <b>346-241-1040 </b>
                   </div>
                 </div>
               </Col>

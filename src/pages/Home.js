@@ -19,8 +19,9 @@ function Home({ logos, artwork }) {
     },
     {
       title: "Color Services",
-      description: "Full-body grooming and waxing services for all genders.",
-      img: "https://images.pexels.com/photos/3065173/pexels-photo-3065173.jpeg",
+      img: "/image/Color.jpeg",
+      alt: "Color",
+      name: "Color",
     },
     {
       title: "Chemical Services",
@@ -29,8 +30,9 @@ function Home({ logos, artwork }) {
     },
     {
       title: "Treatment Services",
-      description: "Full-body grooming and waxing services for all genders.",
-      img: "https://images.pexels.com/photos/3065173/pexels-photo-3065173.jpeg",
+      img: "/image/Curry hair cut and treatments.jpeg",
+  alt: "Carry Haircut and Treatment",
+  name: "Carry Haircut and Treatment",
     },
     {
       title: "Style Services",
@@ -53,12 +55,24 @@ function Home({ logos, artwork }) {
 
 
   const galleryImages = [
-    { src: "https://images.pexels.com/photos/3992875/pexels-photo-3992875.jpeg", size: 6 },
-    { src: "https://images.pexels.com/photos/3065173/pexels-photo-3065173.jpeg", size: 4 },
-    { src: "https://images.pexels.com/photos/3997986/pexels-photo-3997986.jpeg", size: 2 },
-    { src: "https://images.pexels.com/photos/3992875/pexels-photo-3992875.jpeg", size: 4 },
-    { src: "https://images.pexels.com/photos/3065173/pexels-photo-3065173.jpeg", size: 6 },
-    { src: "https://images.pexels.com/photos/3997986/pexels-photo-3997986.jpeg", size: 2 },
+    { src: '/image/salon.jpeg', alt: 'Interior 1', name: 'Salon Interior 1' },
+
+    { src: '/image/interior3.jpeg', alt: 'Interior 3', name: 'Salon Interior 3' },
+    { src: '/image/interior4.jpeg', alt: 'Interior 4', name: 'Salon Interior 4' },
+    { src: '/image/interior5.jpeg', alt: 'Interior 5', name: 'Salon Interior 5' },
+    { src: '/image/Curry hair cut and treatments.jpeg', alt: 'Carry Haircut and Treatment', name: 'Carry Haircut and Treatment' },
+    { src: '/image/Perm and trim shape up.jpeg', alt: 'Perm and Trim Shape Up', name: 'Perm and Trim Shape Up' },
+    { src: '/image/Hair cut, scissors or clippers.jpeg', alt: 'Haircut with Scissors or Clippers', name: 'Haircut with Scissors or Clippers' },
+    { src: '/image/Fade.jpeg', alt: 'Fade', name: 'Fade' },
+    { src: '/image/Wig cut and style.jpeg', alt: 'Wig Cut and Style', name: 'Wig Cut and Style' },
+    { src: '/image/Wig cut, and style.jpeg', alt: 'Wig Cut and Style', name: 'Wig Cut and Style' },
+    { src: '/image/Flat iro.jpeg', alt: 'Flat Iron', name: 'Flat Iron' },
+    { src: '/image/Hair cut for short hair.jpeg', alt: 'Hair Cut for Short Hair', name: 'Hair Cut for Short Hair' },
+   
+    { src: '/image/Men hair cut, fade.jpeg', alt: 'Men Haircut Fade', name: 'Men Haircut Fade' },
+    { src: '/image/Beard trim and edgin.jpeg', alt: 'Beard Trim and Edging', name: 'Beard Trim and Edging' },
+    { src: '/image/Beard trim and edging.jpeg', alt: 'Beard Trim and Edging', name: 'Beard Trim and Edging' }
+
   ];
 
   // List of holidays
@@ -171,29 +185,7 @@ function Home({ logos, artwork }) {
     //     <div className="image-container">{renderArtwork()}</div>
     //   </section>
 
-    //   <section id="salon-time">
-    //     <h3>Current Salon Status</h3>
-    //     <p>Salon is currently: <strong>{salonStatus.toUpperCase()}</strong></p>
-    //   </section>
-
-    //   <section id="operating-hours">
-    //     <h3>Operating Hours</h3>
-    //     <table className="operating-hours-table">
-    //       <thead>
-    //         <tr><th>Day</th><th>Hours</th></tr>
-    //       </thead>
-    //       <tbody>
-    //         <tr><td>Monday</td><td>9:00 AM - 2:30 PM</td></tr>
-    //         <tr><td>Tuesday</td><td>9:00 AM - 2:30 PM</td></tr>
-    //         <tr><td>Wednesday</td><td>9:00 AM - 2:30 PM</td></tr>
-    //         <tr><td>Thursday</td><td>9:00 AM - 2:30 PM</td></tr>
-    //         <tr><td>Friday</td><td>9:00 AM - 2:30 PM</td></tr>
-    //         <tr><td>Saturday</td><td>8:00 AM - 7:00 PM</td></tr>
-    //         <tr><td>Sunday</td><td>Closed</td></tr>
-    //         <tr><td>*AFTER HOURS MONDAY - FRIDAY BY APPOINTMENTS*</td></tr>
-    //       </tbody>
-    //     </table>
-    //   </section>
+    //   /
 
     //   <div className="booking-section">
     //     <a href="https://book.squareup.com/appointments/z288wfnlekxjox/location/LQ0QBKPRB0QHA/services" target="_blank" rel="noopener noreferrer">
@@ -208,10 +200,9 @@ function Home({ logos, artwork }) {
       <Container>
         <Row className="align-items-center">
           <Col md={6} className="d-flex flex-column justify-content-center text-center text-md-start">
-            <h1>Your one-stop destination for personalized unisex services catering to clients of all ages</h1>
-            <p>
-              Whether you're looking for stylish hair color, precision haircuts, or waxing and grooming services, we are dedicated to helping you look and feel your best.
-            </p>
+            <h1>Welcome to Economy Hair Cuts!</h1>
+            <p>Your one-stop destination for personalized unisex services catering to clients of all ages. Whether you're looking for stylish hair color or waxing and grooming services </p>
+          <p>Come visit us today and experience a welcoming space where beauty, style, and relaxation come together. Let us help transform your look and elevate your confidence!</p>
 
             <div>
               <Button href='https://book.squareup.com/appointments/z288wfnlekxjox/location/LQ0QBKPRB0QHA/services' target="_blank" className="mx-2" style={{ background: "#744A73", border: "none", outline: "none" }}>
@@ -246,13 +237,6 @@ function Home({ logos, artwork }) {
     <Col className='px-2 d-flex flex-column justify-content-center text-center text-md-start' md={6}>
     <h2 style={{fontSize: "50px !important"}}>Hair Loss Treatments For Men & Women </h2>
     <span>Hair transplantation provides natural and undetectable results Just like your old hair, you can dye, perm, and cut your transplanted hair with no worries.</span>
-    <ul>
-      <li> <FaCheckCircle color='purple' /> <span>Hair Transplant</span></li>
-      <li> <FaCheckCircle color='purple' /> <span>Hair Transplant</span></li>
-      <li> <FaCheckCircle color='purple' /> <span>Hair Transplant</span></li>
-      <li> <FaCheckCircle color='purple' /> <span>Hair Transplant</span></li>
-
-    </ul>
     </Col>
 
    </Row>
@@ -299,41 +283,47 @@ function Home({ logos, artwork }) {
     </div>
 
     <div className="gallery-section py-5" id="gallery">
-      <Container>
-        {/* Section Title */}
-        <h2 className="text-center mb-4">Gallery</h2>
+  <Container>
+    {/* Section Title */}
+    <h2 className="text-center mb-4">Our Gallery</h2>
 
-        {/* Gallery Grid */}
-        <Row className="g-3">
-          {galleryImages.map((image, index) => (
-            <Col key={index} md={image.size} sm={6} xs={12}>
-              <div className="gallery-item">
-                <img src={image.src} alt={`Gallery ${index}`} className="img-fluid" />
-              </div>
-            </Col>
-          ))}
-        </Row>
-      </Container>
+    {/* Gallery Grid */}
+    <Row className="g-3">
+      {galleryImages.map((image, index) => (
+        <Col key={index} md={4} sm={6} xs={12}>
+          <div className="gallery-item">
+            <img src={image.src} alt={image.alt} className="img-fluid" />
+          </div>
+        </Col>
+      ))}
+    </Row>
+  </Container>
 
-      {/* Custom Styles */}
-      <style jsx>{`
-        .gallery-item {
-          overflow: hidden;
-          border-radius: 10px;
-        }
+  {/* Custom Styles */}
+  <style jsx>{`
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 10px;
+      width: 100%;
+      height: 250px; /* Set a fixed height */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-        .gallery-item img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transition: transform 0.3s ease-in-out;
-        }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures uniform image fit */
+      transition: transform 0.3s ease-in-out;
+    }
 
-        .gallery-item:hover img {
-          transform: scale(1.05);
-        }
-      `}</style>
-    </div>
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+  `}</style>
+</div>
+
 
     <div className="contact-section py-5" id="contact">
       <Container>
@@ -345,26 +335,50 @@ function Home({ logos, artwork }) {
           <Col md={6}>
             <div className="contact-details">
               <h4>Our Office</h4>
-              <p><FaMapMarkerAlt className="icon" /> 4055 Village Dr, Pearland, TX 77581, USA</p>
-              <p><FaPhone className="icon" /> +1 234 567 890</p>
-              <p><FaEnvelope className="icon" /> contact@company.com</p>
+              <p><FaMapMarkerAlt className="icon" />  4055 Village Drive, Pearland, Texas, inside Attiva 55 and Up management office. We’re at the back, or you can follow the signs to the side gate.</p>
+              <p><FaPhone className="icon" />  346-241-1040 or 346-508-8211
+
+</p>
+              <p><FaEnvelope className="icon" /> economyhaircuts@yahoo.com</p>
             </div>
           </Col>
 
           {/* Google Map */}
           <Col md={6}>
-            <div className="map-container">
-              <iframe
-                title="Pearland Texas Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3465.734482117335!2d-95.24826968441816!3d29.561609082070396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640e329ff9dc073%3A0xf5c0844e4f309d08!2s4055%20Village%20Dr%2C%20Pearland%2C%20TX%2077581%2C%20USA!5e0!3m2!1sen!2ske!4v1234567890!5m2!1sen!2ske"
-                width="100%"
-                height="400px"
-                style={{ border: '0' }}
-                allowFullScreen=""
-                loading="lazy"
-              ></iframe>
-            </div>
-          </Col>
+  <div className="map-container">
+    <iframe
+      title="Economy Haircuts Location"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3471.460385491952!2d-95.26774362388831!3d29.532084175185453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640916bc4d2e347%3A0x2f418d28f59ddcad!2sEconomy%20haircuts!5e0!3m2!1sen!2ske!4v1740084599966!5m2!1sen!2ske"
+      width="100%"
+      height="400px"
+      style={{ border: "0" }}
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+    <p className="map-description">
+      Visit us at <strong>Economy Haircuts</strong>, located inside the{" "}
+      <strong>Attiva 55 and Up</strong> management office at{" "}
+      <strong>4055 Village Dr, Pearland, TX 77581</strong>. We're situated at the
+      back; follow the signs to the side gate for easy access.
+    </p>
+  </div>
+
+  <style jsx>{`
+    .map-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .map-description {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #555;
+    }
+  `}</style>
+</Col>
+
+
         </Row>
       </Container>
 
@@ -383,10 +397,10 @@ function Home({ logos, artwork }) {
           font-size: 1.2rem;
         }
 
-        .map-container {
-          border-radius: 10px;
-          overflow: hidden;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        // .map-container {
+        //   border-radius: 10px;
+        //   overflow: hidden;
+        //   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
       `}</style>
     </div>
