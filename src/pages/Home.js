@@ -2,52 +2,56 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import '../App.css'; // Ensure correct path to styles
 import { Button, Col, Container, Row,Card  } from 'react-bootstrap';
 import { FaCheckCircle,FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import image1 from '../images/silk press.jpeg'
+import image2 from '../images/economy hair cut.jpeg'
+import image3 from '../images/men hair cut.jpeg'
+import image4 from '../images/women short hair.jpeg'
+import image5 from '../images/zero fade hair.jpeg'
+import image6 from '../images/long layers color and style.jpeg'
+import image7 from '../images/women hair cut.jpeg'
+import location from '../images/location.jpeg'
+
+
 
 function Home({ logos, artwork }) {
   const [salonStatus, setSalonStatus] = useState('closed'); // Default status
 
   const services = [
     {
-      title: "Hair Cuts Services",
-      description: "Trendy haircuts and styling tailored to your needs.",
-      img: "https://images.pexels.com/photos/3992875/pexels-photo-3992875.jpeg",
+      title: "Silk press and Lightening hair Service",
+      description: "Our Economy texture hair service, tailored to meet your needs.",
+      img: image1,
     },
     {
-      title: "Shampoo Services",
-      description: "Professional hair coloring with a range of shades.",
-      img: "https://images.pexels.com/photos/3065173/pexels-photo-3065173.jpeg",
+      title: "Chemical service",
+      description: "Chemical service for curly textures paired with deep conditioning treatment and roller set.",
+      img: image2,
     },
     {
-      title: "Color Services",
-      img: "/image/Color.jpeg",
-      alt: "Color",
-      name: "Color",
+      title: "Men hair cut",
+      img: image3,
+      description: "Economy men haircut,color and treatment paired service",
     },
     {
-      title: "Chemical Services",
-      description: "Full-body grooming and waxing services for all genders.",
-      img: "https://images.pexels.com/photos/3065173/pexels-photo-3065173.jpeg",
+      title: "Women short hair/layered style",
+      
+      img: image4,
     },
     {
-      title: "Treatment Services",
-      img: "/image/Curry hair cut and treatments.jpeg",
-  alt: "Carry Haircut and Treatment",
-  name: "Carry Haircut and Treatment",
+      title: "Zero fade haircut",
+      description: "This haitcut features a gradual transition from very short hair.",
+      img: image5,
     },
     {
-      title: "Style Services",
-      description: "Full-body grooming and waxing services for all genders.",
-      img: "https://images.pexels.com/photos/3065173/pexels-photo-3065173.jpeg",
+      title: "Long layers color style",
+      description: "Economy women hair cut long layers.",
+      
+      img: image6,
     },
     {
-      title: "Silk Press / price",
-      description: "Full-body grooming and waxing services for all genders.",
-      img: "https://images.pexels.com/photos/3065173/pexels-photo-3065173.jpeg",
-    },
-    {
-      title: "Waxing Services / price",
-      description: "Full-body grooming and waxing services for all genders.",
-      img: "https://images.pexels.com/photos/3065173/pexels-photo-3065173.jpeg",
+      title: "Women haircut.",
+      description: "Undercut with short layers.",
+      img: image7,
     },
 
     
@@ -72,6 +76,15 @@ function Home({ logos, artwork }) {
     { src: '/image/Men hair cut, fade.jpeg', alt: 'Men Haircut Fade', name: 'Men Haircut Fade' },
     { src: '/image/Beard trim and edgin.jpeg', alt: 'Beard Trim and Edging', name: 'Beard Trim and Edging' },
     { src: '/image/Beard trim and edging.jpeg', alt: 'Beard Trim and Edging', name: 'Beard Trim and Edging' }
+
+  ];
+
+  const locationImages = [
+
+
+
+
+
 
   ];
 
@@ -204,19 +217,29 @@ function Home({ logos, artwork }) {
             <p>Your one-stop destination for personalized unisex services catering to clients of all ages. Whether you're looking for stylish hair color or waxing and grooming services </p>
           <p>Come visit us today and experience a welcoming space where beauty, style, and relaxation come together. Let us help transform your look and elevate your confidence!</p>
 
-            <div>
-              <Button href='https://book.squareup.com/appointments/z288wfnlekxjox/location/LQ0QBKPRB0QHA/services' target="_blank" className="mx-2" style={{ background: "#744A73", border: "none", outline: "none" }}>
-                Book Now
-              </Button>
+          <div>
+  <Button
+    href="https://book.squareup.com/appointments/z288wfnlekxjox/location/LQ0QBKPRB0QHA/services"
+    target="_blank"
+    className="mx-2 text-xl px-6 py-3"
+    style={{
+      background: "#744A73",
+      border: "none",
+      outline: "none",
+      fontSize: "1.5rem",
+      padding: "15px 30px",
+    }}
+  >
+    Book Now
+  </Button>
+</div>
 
-              <Button variant="outline-dark">Get Started</Button>
-            </div>
           </Col>
 
           <Col md={6} className="d-flex justify-content-center">
             <img
               style={{ borderRadius: "20px", maxWidth: "100%", height: "auto" }}
-              src="https://t4.ftcdn.net/jpg/04/69/68/17/360_F_469681744_FZWt6LKXLoCU4XVv8Cjx6ZFmwNlNLm7x.jpg"
+              src={location}
               alt="Salon Service"
             />
           </Col>
@@ -224,27 +247,7 @@ function Home({ logos, artwork }) {
       </Container>
     </div>
 
-    <div className='my-2' id="home">
-    <div class="big-image">
-  <div class="overlay">
-    <Container>
-   <Row>
-   
-    <Col md={6}>
-    <img className='w-100' src="https://metropolitanhost.com/themes/templatemoster/html/powar/hstyle/assets/img/home-1/570x460.jpg" />
-    </Col>
-
-    <Col className='px-2 d-flex flex-column justify-content-center text-center text-md-start' md={6}>
-    <h2 style={{fontSize: "50px !important"}}>Hair Loss Treatments For Men & Women </h2>
-    <span>Hair transplantation provides natural and undetectable results Just like your old hair, you can dye, perm, and cut your transplanted hair with no worries.</span>
-    </Col>
-
-   </Row>
-   </Container>
-  </div>
-</div>
-   
-  </div>
+    
 
   <div className="our-services  py-2" id="services">
       <Container>
@@ -335,11 +338,36 @@ function Home({ logos, artwork }) {
           <Col md={6}>
             <div className="contact-details">
               <h4>Our Office</h4>
-              <p><FaMapMarkerAlt className="icon" />  4055 Village Drive, Pearland, Texas, inside Attiva 55 and Up management office. We’re at the back, or you can follow the signs to the side gate.</p>
+              <p><FaMapMarkerAlt className="icon" /> 
+      <strong>Attiva 55 and Up</strong> management office at{" "}
+      <strong>4055 Village Dr, Pearland, TX 77581</strong>.
+              </p>
               <p><FaPhone className="icon" />  346-241-1040 or 346-508-8211
 
 </p>
               <p><FaEnvelope className="icon" /> economyhaircuts@yahoo.com</p>
+
+              <p>
+              Park at the front of Attiva Management office at the circle, there two ways to find Economy hair cut, 
+
+              <ol>
+                <li>
+                Following directional signs to side gate. You can call and will meet you at the front. 
+                </li>
+                <li>
+                Open doors at the front and walk through lobby area. Hang to the left, We’re located at the back.
+                </li>
+
+                <li>
+                You can call 346-508-8211 or 346-241-1040 should you need assistance.
+                  </li>
+              </ol>
+
+
+              </p>
+
+
+
             </div>
           </Col>
 
@@ -357,10 +385,7 @@ function Home({ logos, artwork }) {
       referrerPolicy="no-referrer-when-downgrade"
     ></iframe>
     <p className="map-description">
-      Visit us at <strong>Economy Haircuts</strong>, located inside the{" "}
-      <strong>Attiva 55 and Up</strong> management office at{" "}
-      <strong>4055 Village Dr, Pearland, TX 77581</strong>. We're situated at the
-      back; follow the signs to the side gate for easy access.
+      
     </p>
   </div>
 
@@ -379,18 +404,25 @@ function Home({ logos, artwork }) {
 </Col>
 
 
+
+
         </Row>
+
+        <Row className="g-3">
+      {locationImages.map((image, index) => (
+        <Col key={index} md={4} sm={6} xs={12}>
+          <div className="gallery-item">
+            <img src={image.src} alt={image.alt} className="img-fluid" />
+          </div>
+        </Col>
+      ))}
+    </Row>
+
       </Container>
 
       {/* Custom Styles */}
       <style jsx>{`
-        .contact-details p {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          font-size: 1.1rem;
-          margin: 10px 0;
-        }
+     
 
         .contact-details .icon {
           color: #744A73;
