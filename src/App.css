@@ -422,6 +422,8 @@ form {
   .app p {
     font-size: 0.95rem;
   }
+
+  
 }
 
 /* Center headings */
@@ -866,6 +868,11 @@ nav {
 
   #gallery .booking-btn {
     font-size: 0.9rem;
+  }
+
+  .row-1-home{
+    background-color: #F7F7F7;
+    margin-top: 11Vh !important;
   }
 }
 

@@ -9,7 +9,7 @@ import image4 from '../images/women short hair.jpeg'
 import image5 from '../images/zero fade hair.jpeg'
 import image6 from '../images/long layers color and style.jpeg'
 import image7 from '../images/women hair cut.jpeg'
-import location from '../images/location.jpeg'
+import location from '../images/location2.jpeg'
 
 
 
@@ -228,6 +228,7 @@ function Home({ logos, artwork }) {
       outline: "none",
       fontSize: "1.5rem",
       padding: "15px 30px",
+      margin: "1rem 0"
     }}
   >
     Book Now
